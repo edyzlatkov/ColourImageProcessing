@@ -60,9 +60,9 @@ void RGBHistogramWidget::paintEvent(QPaintEvent *event)
               int greenHeight = m_greenValues[i] * height() / (width() * height());
               int blueHeight = m_blueValues[i] * height() / (width() * height());
 
-              QRect blueBar(i * barWidth, height() - blueHeight - 20, barWidth, blueHeight);
-              QRect greenBar(i * barWidth, height() - blueHeight - greenHeight - 20, barWidth, greenHeight);
-              QRect redBar(i * barWidth, height() - blueHeight - greenHeight - redHeight - 20, barWidth, redHeight);
+              QRect blueBar((i * barWidth) + 40, height() - blueHeight - 20, barWidth, blueHeight);
+              QRect greenBar((i * barWidth) + 40, height() - blueHeight - greenHeight - 20, barWidth, greenHeight);
+              QRect redBar((i * barWidth) + 40, height() - blueHeight - greenHeight - redHeight - 20, barWidth, redHeight);
 
               painter.fillRect(redBar, Qt::red);
               painter.fillRect(greenBar, Qt::green);
