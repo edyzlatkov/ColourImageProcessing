@@ -321,6 +321,8 @@ void RGBHistogramWidget::setChart(){
     histogramChart->createDefaultAxes(); // set the axis
     histogramChart->axes(Qt::Horizontal).back()->setRange(0, axisXMax);
     histogramChart->axes(Qt::Horizontal).back()->setTitleText("axis x");
+    
+    histogramChart->axes(Qt::Horizontal).back()->setGridLineVisible(false);
     histogramChart->axes(Qt::Vertical).back()->setTitleText("axis y");
 
 }
